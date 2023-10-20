@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Préstamo</title>
+</head>
+<body>
+    <h1>Finalizar Préstamo</h1>
+    <p>Estás a punto de finalizar el préstamo del libro "{{ prestamo.libro.titulo }}" a {{ prestamo.usuario.nombre }}.</p>
+    <form method="post" action="{% url 'finalizar_prestamo' prestamo.id %}">
+    <a href="{% url 'lista_prestamos' %}">Volver a la Lista de Préstamos</a>
+</body>
+</html>
